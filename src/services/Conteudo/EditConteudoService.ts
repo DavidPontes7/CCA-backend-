@@ -15,7 +15,7 @@ class EditConteudoService {
             data: {
                 titulo: novoTitulo,
                 corpo: novoCorpo,
-                
+
             },
         });
 

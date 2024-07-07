@@ -9,9 +9,10 @@ class ListInscricaoService {
                 telefone: true,
                 sector: true,
                 group: true,
-                eventId: true   
-
-            }
+                eventId: true,  
+                event: { select: { title: true } }, 
+            },
+            orderBy: { createdAt: 'desc' },
         })
         return inscricao
     }

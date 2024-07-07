@@ -14,13 +14,14 @@ datasource db {
 }
 
 model Admin {
-  id         String    @id @default(uuid())
-  name       String
-  email      String    @unique
-  password   String
-  isAdmin    Boolean   @default(false)
-  created_at DateTime? @default(now())
-  update_at  DateTime? @default(now())
+  isFirstLogin Boolean   @default(true)
+  id           String    @id @default(uuid())
+  name         String
+  email        String    @unique
+  password     String
+  isAdmin      Boolean   @default(false)
+  created_at   DateTime? @default(now())
+  update_at    DateTime? @default(now())
 
   @@map("Admins")
 }

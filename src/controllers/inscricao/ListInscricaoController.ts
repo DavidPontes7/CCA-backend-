@@ -1,8 +1,8 @@
-import { Request,Response } from "express";
+import { Request, Response } from "express";
 import { ListInscricaoService } from "../../services/inscricao/ListInscricaoService";
 
 class ListInscricaoController {
-    async handle (req:Request, res: Response) {
+    async handle(req: Request, res: Response) {
 
         const listInscricaoService = new ListInscricaoService();
 
@@ -12,4 +12,4 @@ class ListInscricaoController {
     }
 }
 
-export {ListInscricaoController}
+export { ListInscricaoController }

@@ -11,7 +11,7 @@ interface InscricaoRequest {
 }
 
 class CreateInscricaoService {
-    async execute({ name, email, group, sector,eventId,telefone,idade }: InscricaoRequest) {
+    async execute({ name, email, group, sector, eventId, telefone, idade }: InscricaoRequest) {
 
         const inscricao = await prismaClient.registration.create({
             data: {

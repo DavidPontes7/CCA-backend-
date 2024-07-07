@@ -4,7 +4,6 @@ interface ConteudoRemoveRequest{
     conteudo_id: string;
 }
 
-
 class RemoveConteudoService{
     async execute({ conteudo_id}:ConteudoRemoveRequest){
 
