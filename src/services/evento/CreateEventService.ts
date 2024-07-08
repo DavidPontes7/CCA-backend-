@@ -4,7 +4,7 @@ interface EventoRequest {
     title: string;
     description: string;
     banner: string;
-    date: Date;
+    date: string;
 }
 
 class CreateEventService {
@@ -23,4 +23,4 @@ class CreateEventService {
     }
 }
 
-export {CreateEventService}
+export { CreateEventService }

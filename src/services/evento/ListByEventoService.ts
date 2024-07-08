@@ -5,7 +5,10 @@ class ListByEventoService {
         const evento = await prismaClient.event.findMany({
             select: {
                 id:true,
+                date: true,
                 title: true,
+                description: true,
+                banner: true
             },
             
         })

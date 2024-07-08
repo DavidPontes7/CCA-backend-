@@ -26,6 +26,8 @@ import { ListInscricaoController } from './controllers/inscricao/ListInscricaoCo
 import { ListAdminController } from './controllers/admin/ListAdminController';
 import { ListByEventoController } from './controllers/evento/ListByEventoController';
 import { EditConteudoController } from './controllers/conteudo/EditConteudoController';
+import { CreateLiturgiaController } from './controllers/liturgia/CreateLiturgiaController';
+import { ListLiturgiaDiariaController } from './controllers/liturgia/ListLiturgiaController';
 
 
 const router = Router();
@@ -69,6 +71,11 @@ router.get('/inscricao', isAuthenticated, new ListInscricaoController().handle)
 router.post('/evento', isAuthenticated, upload.single('file'), new CreateEventController().handle)
 
 router.get('/evento', new ListByEventoController().handle)
+
+//Rota Liturgia
+router.post('/liturgia', isAuthenticated, new CreateLiturgiaController().handle)
+
+router.get('/liturgia', new ListLiturgiaDiariaController().handle)
 
 
 
