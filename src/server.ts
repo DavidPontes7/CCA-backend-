@@ -34,19 +34,19 @@ router.get('/conteudo/:id', async (req, res) => {
 //Deletar Contéudo por Id
 router.delete('/conteudo/:id', async (req, res) => {
     const { id } = req.params;
-  
-    try {
-      const service = new RemoveConteudoService();
-      const conteudo = await service.execute({ conteudo_id: id });
-  
-      res.status(200).json(conteudo);
-    } catch (error) {
-      console.error('Erro ao excluir conteúdo:', error);
-      res.status(500).json({ error: 'Erro interno ao excluir conteúdo' });
-    }
-  });
 
-  
+    try {
+        const service = new RemoveConteudoService();
+        const conteudo = await service.execute({ conteudo_id: id });
+
+        res.status(200).json(conteudo);
+    } catch (error) {
+        console.error('Erro ao excluir conteúdo:', error);
+        res.status(500).json({ error: 'Erro interno ao excluir conteúdo' });
+    }
+});
+
+
 
 
 
