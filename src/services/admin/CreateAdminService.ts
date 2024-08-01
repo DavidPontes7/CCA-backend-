@@ -10,7 +10,7 @@ interface UserRequest {
 
 class CreateAdminService {
     async execute({name,email,password}:UserRequest) {
-            //vcerificar se ele eenviou um email
+            //verificar se ele eenviou um email
             if(!email) {
                 throw new Error("Email Incorreto")
             }

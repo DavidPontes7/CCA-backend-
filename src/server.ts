@@ -46,10 +46,6 @@ router.delete('/conteudo/:id', async (req, res) => {
     }
 });
 
-
-
-
-
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     if (err instanceof Error) {
         //se for uma instancia do tipo error

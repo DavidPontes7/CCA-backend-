@@ -6,11 +6,12 @@ interface LiturgiaRequest {
     segundaLeitura?: string;
     titulo: string;
     evangelho: string;
-    corLiturgica: string
+    corLiturgica: string;
+    dia: string;
 }
 
 class CreateLiturgiaService {
-    async execute({ primeiraLeitura, segundaLeitura, salmoResponsorial, titulo, evangelho, corLiturgica, }: LiturgiaRequest) {
+    async execute({ primeiraLeitura, segundaLeitura, salmoResponsorial, titulo, evangelho, corLiturgica, dia }: LiturgiaRequest) {
 
         const liturgia = await prismaClient.leituraDiaria.create({
             data: {
@@ -20,6 +21,7 @@ class CreateLiturgiaService {
                 titulo: titulo,
                 evangelho: evangelho,
                 corLiturgica: corLiturgica,
+                dia: dia
 
             }
         })

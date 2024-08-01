@@ -58,9 +58,6 @@ router.get('/conteudo', new ListByConteudoController().handle)
 router.patch('/conteudo/editar/:id', isAuthenticated, new EditConteudoController().handleEdit);
 
 
-//Rotas Delete/conteudo
-// router.delete('/conteudo/:id', isAuthenticated, new RemoveConteudoController().handle)
-
 //Rotas Inscições
 router.post('/inscricao', new CreateInscricaoController().handle)
 
