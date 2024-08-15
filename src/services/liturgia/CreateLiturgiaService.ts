@@ -21,7 +21,7 @@ class CreateLiturgiaService {
                 titulo: titulo,
                 evangelho: evangelho,
                 corLiturgica: corLiturgica,
-                dia: dia
+                dia: new Date(dia) // Converte string para Date
 
             }
         })

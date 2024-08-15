@@ -5,14 +5,14 @@ class ListByConteudoService {
         const conteudo = await prismaClient.conteudo.findMany({
             select: {
                 id: true,
-                banner:true,
+                banner: true,
                 titulo: true,
                 corpo: true,
                 autor: true,
                 publicadoEm: true,
                 categoriaId: true,
-                categoria: { select: { name: true } }, 
-                
+                categoria: { select: { name: true } },
+
             },
             orderBy: { publicadoEm: 'desc' },
         })
@@ -20,4 +20,4 @@ class ListByConteudoService {
     }
 }
 
-export {ListByConteudoService}
+export { ListByConteudoService }

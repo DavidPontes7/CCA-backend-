@@ -1,8 +1,12 @@
 import prismaClient from "../../prisma";
 
 class ListLiturgiaDiariaServices {
-    async execute() {
+    async execute(currentDate: string) {
+        // Converte a data para o formato que o Prisma espera, se necessário
         const liturgia = await prismaClient.leituraDiaria.findMany({
+            where: {
+                data: currentDate // Filtro para a data atual
+            },
             select: {
                 primeiraLeitura: true,
                 segundaLeitura: true,
@@ -14,8 +18,7 @@ class ListLiturgiaDiariaServices {
             orderBy: {
                 data: 'desc' 
             }
-
-        })
+        });
         return liturgia;
     }
 }

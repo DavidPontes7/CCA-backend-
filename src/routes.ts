@@ -55,8 +55,7 @@ router.get('/category/conteudo', new ListByCategoryController().handle)
 
 router.get('/conteudo', new ListByConteudoController().handle)
 
-router.patch('/conteudo/editar/:id', isAuthenticated, new EditConteudoController().handleEdit);
-
+router.put('/conteudo/editar/:id', isAuthenticated, upload.single('file'), new EditConteudoController().handleEdit);
 
 //Rotas Inscições
 router.post('/inscricao', new CreateInscricaoController().handle)
